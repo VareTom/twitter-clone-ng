@@ -1,0 +1,42 @@
+@import 'src/assets/styles/colors';
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .content {
+    display: flex;
+    width: 75%;
+    height: 100%;
+
+    .left-side {
+      width: 15%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .main {
+      width: 35%;
+    }
+    .right-side {
+      width: 25%;
+    }
+  }
+
+  .messages-box {
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .container {
+    .content {
+      width: 95%;
+    }
+  }
+}

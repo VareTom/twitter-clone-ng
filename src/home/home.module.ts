@@ -4,6 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 // Components
 import { HomeComponent } from './containers/home/home.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 // Modules
 import { SharedModule } from '../shared/shared.module';
@@ -14,7 +15,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,

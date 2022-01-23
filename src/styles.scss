@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'src/assets/styles/colors.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background: $black;
+  color: $grey;
+  height: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.button {
+  background: $blue;
+  color: white;
+  border-radius: 40px;
+  padding: 16px;
+  border: 1px solid $blue;
+
+  &.white {
+    background: $text-grey;
+    color: $black;
+    border: 1px solid $text-grey;
+  }
+}

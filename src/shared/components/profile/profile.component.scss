@@ -1,0 +1,47 @@
+@import 'src/assets/styles/colors';
+
+.profile-box {
+  width: calc(100% - 20px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 65px;
+  padding: 0 10px;
+  margin-bottom: 10px;
+  border-radius: 40px;
+  &:hover {
+    background: $hover;
+  }
+
+  .user-info-box {
+    display: flex;
+    flex-direction: row;
+    img {
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    }
+    .user-info {
+      margin-left: 10px;
+      display: flex;
+      flex-direction: column;
+      .user-name {
+        font-size: 15px;
+        color: $text-grey;
+      }
+      .user-tag {
+        color: $grey;
+      }
+    }
+  }
+
+
+  .more-actions {
+    position: relative;
+    right: 0;
+    img {
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

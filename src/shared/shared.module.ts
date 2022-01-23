@@ -5,13 +5,25 @@ import { TranslateModule } from '@ngx-translate/core';
 // Service
 import { AuthService } from './services/auth.service';
 
+// Components
+import { ProfileComponent } from './components/profile/profile.component';
+import { MessagesComponent } from './components/messages/messages.component';
+
 
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ProfileComponent,
+    MessagesComponent
+  ],
   imports: [
     CommonModule,
     TranslateModule
+  ],
+  exports: [
+    TranslateModule,
+    ProfileComponent,
+    MessagesComponent
   ]
 })
 export class SharedModule {
