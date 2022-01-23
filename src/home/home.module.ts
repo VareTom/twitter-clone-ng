@@ -3,23 +3,25 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 // Components
-import { AuthComponent } from './containers/auth/auth.component';
+import { HomeComponent } from './containers/home/home.component';
+
+// Modules
 import { SharedModule } from '../shared/shared.module';
 
 const routes: Routes = [
-  { path: 'auth', component: AuthComponent}
+  { path: 'home', component: HomeComponent }
 ]
 
 @NgModule({
   declarations: [
-    AuthComponent
+    HomeComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forRoot(routes),
     
     // Custom Modules
-    SharedModule.forRoot()
+    SharedModule
   ]
 })
-export class AuthModule { }
+export class HomeModule { }

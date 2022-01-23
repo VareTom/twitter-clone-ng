@@ -13,16 +13,16 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { AppComponent } from './app.component';
 
 // Modules
-import { AuthModule } from '../auth/auth.module';
 import { SharedModule } from '../shared/shared.module';
+import { HomeModule } from '../home/home.module';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient, 'assets/i18n/', '.json');
 }
 
 const routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'auth' },
-  { path: '**', redirectTo: 'auth' },
+  { path: '', pathMatch: 'full', redirectTo: 'home' },
+  { path: '**', redirectTo: 'home' },
 ]
 
 @NgModule({
@@ -45,7 +45,7 @@ const routes = [
     }),
 
     // Custom Modules
-    AuthModule,
+    HomeModule,
     SharedModule
 
   ],
